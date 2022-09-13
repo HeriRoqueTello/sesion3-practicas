@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <section class="section-container">
+      <div class="container">
+        <form onsubmit="setAverage();return false" class="form">
+          <h1 class="title form-title noselect">Promedio</h1>
+          <label for="student" class="label">Alumno:</label>
+          <input type="text" id="student" class="form-input" placeholder="Nombre del alumno" required />
+          <label for="grade1" class="label">Nota 1:</label>
+          <input type="number" id="grade1" class="form-input" min="0" max="20" value="0" required />
+          <label for="grade2" class="label">Nota 2:</label>
+          <input type="number" id="grade2" class="form-input" min="0" max="20" value="0" required />
+          <hr hidden />
+          <div class="result-container">
+            <p class="label label-result" id="student-text" hidden></p>
+            <p class="label label-result" id="average-text" hidden></p>
+          </div>
+          <input type="submit" class="btn btn-primary" id="average" value="Promedio" />
+          <input type="button" onclick="clearInput()" class="btn btn-primary" id="clear" value="Limpiar" hidden />
+        </form>
+      </div>
+    </section>
+    <script src="../js/2.js"></script>
+  </body>
+</html>

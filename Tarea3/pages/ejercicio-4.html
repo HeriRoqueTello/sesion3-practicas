@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <section class="section-container">
+      <div class="container">
+        <form onsubmit="setIgv();return false" class="form">
+          <h1 class="title form-title noselect">Calcular IGV</h1>
+          <label for="product" class="label">Producto:</label>
+          <input type="text" id="product" class="form-input" placeholder="Producto..." required />
+          <label for="price" class="label">Precio:</label>
+          <input type="number" id="price" class="form-input" value="0" step="any" min="0" value="0" required />
+          <hr hidden />
+          <div class="result-container" style="flex-direction: column">
+            <p class="label label-result" id="product-text" hidden></p>
+            <p class="label label-result" id="price-text" hidden></p>
+            <p class="label label-result" id="igv-text" hidden></p>
+            <p class="label label-result" id="totalprice-text" hidden></p>
+          </div>
+          <input type="submit" class="btn btn-primary" id="total" value="Total" />
+          <input type="button" onclick="clearInput()" class="btn btn-primary" id="clear" value="Limpiar" hidden />
+        </form>
+      </div>
+    </section>
+    <script src="../js/4.js"></script>
+  </body>
+</html>
